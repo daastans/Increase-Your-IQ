@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+    <include
+        android:layout_above="@id/questin_image"
+        layout="@layout/back_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+    android:layout_above="@id/buttonView"
+    android:id="@+id/question_area"
+    android:layout_marginTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+   >
+    <com.example.increaseyouriq.LineEditText
+        android:visibility="gone"
+        android:id="@+id/question_edittext"
+        android:lineSpacingExtra="10dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:longClickable="false"
+        android:background="@null"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/questin_image"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/question"
+        />
+</LinearLayout>
+    <include
+        android:id="@+id/buttonView"
+        layout="@layout/keyboard_answer"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</RelativeLayout>
